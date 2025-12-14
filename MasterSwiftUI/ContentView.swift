@@ -1,0 +1,25 @@
+//
+//  ContentView.swift
+//  MasterSwiftUI
+//
+//  Created by Sadath S on 07/10/25.
+//
+
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        VStack {
+            Image(systemName: "globe")
+                .imageScale(.large)
+                .foregroundStyle(.tint)
+            Text("Hello, world!")
+                .padding()
+        }
+        .frame(width: .infinity, height: .infinity, alignment: .top)
+    }
+}
+
+#Preview {
+    ContentView()
+}
