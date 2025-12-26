@@ -8,9 +8,36 @@
 import SwiftUI
 
 struct NavigationComponent: View {
+    @State var navigationArray: [ScreenStateStackPath] = []
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack(path: $navigationArray) {
+                Spacer()
+                VStack {
+                    Button("Go To Secound Screen") {
+                        navigationArray.append(.secoundScreen("Check It Out"))
+                    }
+                }
+                Spacer()
+            .navigationDestination(for: ScreenStateStackPath.self) { enumType in
+                switch enumType{
+                case let .secoundScreen(secoundScreenText):
+                    SecondScreen(text: secoundScreenText)
+                }
+            }
+        }
     }
+}
+
+struct SecondScreen: View {
+    var text: String = "this is secound screen"
+    var body: some View {
+        Text(text)
+    }
+}
+
+enum ScreenStateStackPath: Hashable {
+    case secoundScreen(String)
 }
 
 #Preview {

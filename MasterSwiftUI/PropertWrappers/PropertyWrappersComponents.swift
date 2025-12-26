@@ -10,10 +10,12 @@ import SwiftUI
 struct PropertyWrappersComponents: View {
     @State private var text: String = ""
     @State private var isPresented: Bool = false
+    @EnvironmentObject private var viewModel : PropertyWrapperViewModel
     
     var body: some View {
-        Text("\(text)")
+        Text("\(viewModel.text)")
         Button("Click To Open Sheet") {
+            viewModel.changeTheText()
             isPresented.toggle()
         }
         .sheet(isPresented: $isPresented) {

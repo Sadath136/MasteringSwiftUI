@@ -9,7 +9,18 @@ import SwiftUI
 
 struct ViewThatFitsComponent: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ViewThatFits {
+            Text("HI I AM A TEXT I need to see text heiracy in my parent view")
+            Text("If it Does not fit in this UI hjsd djsdjs jbdjs dsbsj sd")
+            Text("If it fits third UI")
+        }
+        .frame(maxWidth: .infinity)
+        .frame(height: 200)
+        .background {
+            Color.blue
+        }
+        .padding(.horizontal)
+        .shadow(radius: 10)
     }
 }
 

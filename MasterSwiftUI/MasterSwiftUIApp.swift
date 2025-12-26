@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct MasterSwiftUIApp: App {
+    @StateObject var viewModel = PropertyWrapperViewModel()
+    
     var body: some Scene {
         WindowGroup {
            // ColorComponent()
@@ -20,7 +22,11 @@ struct MasterSwiftUIApp: App {
 //                .init(nestedItems: []),
 //                .init(nestedItems: [])
 //            ])
-            ActionSheetComponent()
+       //     ActionSheetComponent()
+         //   OnboardingView()
+         //   NavigationComponent()
+            PropertyWrappersComponents()
         }
+        .environmentObject(viewModel)
     }
 }
