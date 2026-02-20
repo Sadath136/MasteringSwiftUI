@@ -25,7 +25,12 @@ struct MasterSwiftUIApp: App {
        //     ActionSheetComponent()
          //   OnboardingView()
          //   NavigationComponent()
-            PropertyWrappersComponents()
+          //  PropertyWrappersComponents()
+        //    ListComponent()
+        //    LongPressGestureComponent()
+        //    MagnificantGesture()
+          //  RotationGestureComponent()
+            HorizontalMxnCards()
         }
         .environmentObject(viewModel)
     }

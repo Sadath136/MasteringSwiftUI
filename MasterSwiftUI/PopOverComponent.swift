@@ -33,7 +33,7 @@ struct PopOverview: View {
     var popOverRatings: [String] = [
         "Very Good 😄",
         "Very Poor 👹",
-        "Average 🤓"
+        "Average 🤓 "
     ]
     
     var body: some View {
